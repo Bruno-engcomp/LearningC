@@ -8,19 +8,19 @@ int main ()
     float n1, n2;
     do 
     {
-    printf("----CALCULATOR----\n");
-    printf("------------------\n");
-    printf("ADDITION       [1]\n");
-    printf("SUBTRACTION    [2]\n");
-    printf("MULTIPLICATION [3]\n");
-    printf("DIVISION       [4]\n");
-    printf("POW            [5]\n");
-    printf("SQUARE ROOT    [6]\n");
-    printf("EXIT           [0]\n");
-    printf("------------------\n");
+        printf("----CALCULATOR----\n");
+        printf("------------------\n");
+        printf("ADDITION       [1]\n");
+        printf("SUBTRACTION    [2]\n");
+        printf("MULTIPLICATION [3]\n");
+        printf("DIVISION       [4]\n");
+        printf("POW            [5]\n");
+        printf("SQUARE ROOT    [6]\n");
+        printf("EXIT           [0]\n");
+        printf("*----------------*\n");
 
-    printf("Enter the option: ");
-    scanf("%d", &resp);
+        printf("Enter the option: ");
+        scanf("%d", &resp);
 
     
         switch (resp)
