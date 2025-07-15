@@ -17,7 +17,7 @@ int main ()
         printf("POW            [5]\n");
         printf("SQUARE ROOT    [6]\n");
         printf("EXIT           [0]\n");
-        printf("*----------------*\n");
+        printf("------------------\n");
 
         printf("Enter the option: ");
         scanf("%d", &resp);
