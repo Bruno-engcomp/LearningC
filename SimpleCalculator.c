@@ -3,9 +3,10 @@
 
 int main ()
 {   
-    int resp;
-    char r;
+    char resp[10];
+    char r[10];
     float n1, n2;
+    int c; //para limpar o buffer
     do 
     {
         printf("----CALCULATOR----\n");
@@ -20,35 +21,39 @@ int main ()
         printf("------------------\n");
 
         printf("Enter the option: ");
-        scanf("%d", &resp);
+        fgets(resp, sizeof(resp), stdin);
 
     
-        switch (resp)
+        switch (resp[0])
         {
-            case 1:
+            case '1':
                 printf("Enter two numbers: ");
 
                 scanf("%f %f", &n1, &n2);
+                while((c = getchar()) != '\n' && c != EOF);
                 printf("Result: %.2f\n", n1 + n2);
             break;
 
-            case 2:
+            case '2':
                 printf("Enter two numbers: ");
 
                 scanf("%f %f", &n1, &n2);
+                while((c = getchar()) != '\n' && c != EOF);
                 printf("Result: %.2f\n", n1 - n2);
             break;
 
-            case 3:
+            case '3':
                 printf("Enter two numbers: ");
 
                 scanf("%f %f", &n1, &n2);
+                while((c = getchar()) != '\n' && c != EOF);
                 printf("Result: %.2f\n", n1 * n2);
             break;
 
-            case 4:
+            case '4':
                 printf("Enter two numbers: ");
                 scanf("%f %f", &n1, &n2);
+                while((c = getchar()) != '\n' && c != EOF);
                 if (n2 != 0)
                 {
                     printf("Result: %.2f\n", n1 / n2);
@@ -57,17 +62,19 @@ int main ()
                     printf("Error: can't divide by zero!\n");
             break;
 
-            case 5:
+            case '5':
                 printf("Enter two numbers: ");
 
                 scanf("%f %f", &n1, &n2);
+                while((c = getchar()) != '\n' && c != EOF);
                 printf("Result: %.2f\n", pow(n1,n2));
             break;
 
-            case 6:
+            case '6':
                 printf("Enter a number: ");
 
                 scanf("%f", &n1);
+                while((c = getchar()) != '\n' && c != EOF);
                 if (n1 > 0)
                 {
                     printf("Result: %.2f\n", sqrt(n1));
@@ -77,7 +84,7 @@ int main ()
                     printf("Error: negative number has no real square root.\n");
                 }
             break;
-            case 0:
+            case '0':
                 printf("Exiting the calculator...\n");
                 return 0;
 
@@ -87,8 +94,8 @@ int main ()
             
         }
         printf("Do you want to continue? [Y/n]");
-        scanf(" %c", &r);
-    } while (r == 'Y' || r == 'y');
+        fgets(r, sizeof(r), stdin);
+    } while (r[0] == 'Y' || r[0] == 'y');
 
     return 0;
 }
