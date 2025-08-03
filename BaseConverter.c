@@ -13,7 +13,7 @@ int main ()
     {
        printf ("Decimal: %d, HexaDecimal: %x, Octal: %o, binary: %d\n",i ,i ,i , binary(i));
     }
-    
+    return 0;
 }
 
 // Function that converts decimal to binary
