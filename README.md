@@ -1,1 +1,1 @@
-C language fundamentals repository
+C language fundamentals and projects repository
